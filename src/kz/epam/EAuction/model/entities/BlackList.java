@@ -8,6 +8,7 @@ import java.io.Serializable;
 public class BlackList extends Entity implements Serializable {
     private static final long serialVersionUID = 1L;
     private int userId;
+    private String description;
 
     public BlackList() {
         super();
@@ -29,6 +30,14 @@ public class BlackList extends Entity implements Serializable {
         this.userId = userId;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -37,7 +46,8 @@ public class BlackList extends Entity implements Serializable {
 
         BlackList blackList = (BlackList) o;
 
-        return userId == blackList.userId;
+        if (userId != blackList.userId) return false;
+        return description.equals(blackList.description);
 
     }
 
@@ -45,6 +55,7 @@ public class BlackList extends Entity implements Serializable {
     public int hashCode() {
         int result = super.hashCode();
         result = 31 * result + userId;
+        result = 31 * result + description.hashCode();
         return result;
     }
 
@@ -52,6 +63,7 @@ public class BlackList extends Entity implements Serializable {
     public String toString() {
         return "BlackList{" +
                 "userId=" + userId +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
