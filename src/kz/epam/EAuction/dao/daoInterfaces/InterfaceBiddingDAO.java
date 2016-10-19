@@ -4,6 +4,7 @@ import kz.epam.EAuction.model.entities.Bidding;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,7 +12,8 @@ import java.util.List;
  */
 public interface InterfaceBiddingDAO {
     Connection releaseConnection();
-    boolean addInBidding(int betId,int productId) throws SQLException;
+    int createBidding (int productId, Date dateDead) throws SQLException;
+    int addInBidding(int betId,int productId) throws SQLException;
     Bidding getBiddingOnProduct (int productId) throws SQLException;
     List<Bidding> getBiddings () throws SQLException;
 }
