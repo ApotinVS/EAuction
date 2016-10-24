@@ -60,7 +60,7 @@ public class BetDAO implements InterfaceBetDAO {
             }
         }
         finally {
-            if (preparedStatement!=null){
+            if (preparedStatement != null){
                 preparedStatement.close();
             }
             if (resultSet != null){

@@ -1,0 +1,192 @@
+public class Product extends Entity implements Serializable {
+    private static final serialVersionUID = 1L;
+    private int categoryId;
+    private String productName;
+    private float beginPrice;
+    private float fullPrice;
+    private int quantity;
+    private String description;
+    
+    public Product(){
+    super();
+    }
+    
+    public Product(int id, int categoryId, String productName,
+			float beginPrice, float fullPrice, int quantity) {
+		super(id);
+		  this.categoryId = categoryId;
+		  this.productName = productName;
+		  this.beginPrice = beginPrice;
+      this.fullPrice = fullPrice;
+		  this.quantity = quantity;
+		}
+    
+    public Product(int id, int categoryId, String productName,
+			float beginPrice, float fullPrice, int quantity, String description) {
+      super(id);
+      this.categoryId = categoryId;
+      this.productName = productName;
+      this.beginPrice = beginPrice;
+      this.fullPrice = fullPrice;
+      this.quantity = quantity;
+      this.description = description;
+	 }
+   
+   
+	@Override
+	public int getId() {
+		return super.getId();
+	}
+
+	@Override
+	public void setId(int id) {
+		super.setId(id);
+	}
+
+	/**
+	 * @return the category
+	 */
+	public int getCategoryId() {
+		return categoryId;
+	}
+
+	/**
+	 * @param category
+	 *            the category to set
+	 */
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	/**
+	 * @return the productName
+	 */
+	public String getProductName() {
+		return productName;
+	}
+
+	/**
+	 * @param productName
+	 *            the productName to set
+	 */
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	/**
+	 * @return the beginPrice
+	 */
+	public float getBeginPrice() {
+		return beginPrice;
+	}
+
+	/**
+	 * @param beginPrice
+	 *            the beginPrice to set
+	 */
+	public void setBeginPrice(float beginPrice) {
+		this.beginPrice = beginPrice;
+	}
+
+
+	/**
+	 * @return the fullPrice
+	 */
+	public float getFullPrice() {
+		return fullPrice;
+	}
+
+	/**
+	 * @param fullPrice
+	 *            the fullPrice to set
+	 */
+	public void setBeginPrice(float fullPrice) {
+		this.fullPrice = fullPrice;
+	}
+  
+	/**
+	 * @return the unitsQuantity
+	 */
+	public int getQuantity() {
+		return quantity;
+	}
+
+	/**
+	 * @param unitsQuantity
+	 *            the unitsQuantity to set
+	 */
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	/**
+	 * @return the description
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * @param description
+	 *            the description to set
+	 */
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + categoryId;
+		result = prime * result
+				+ ((description == null) ? 0 : description.hashCode());
+		result = prime * result
+				+ ((productName == null) ? 0 : productName.hashCode());
+		result = prime * result + Float.floatToIntBits(beginPrice);
+    result = prime * result + Float.floatToIntBits(fullPrice);
+		result = prime * result + quantity;
+		return result;
+	}
+  
+  @Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Product other = (Product) obj;
+		if (categoryId != other.categoryId)
+			return false;
+		if (description == null) {
+			if (other.description != null)
+				return false;
+		} else if (!description.equals(other.description))
+			return false;
+		if (productName == null) {
+			if (other.productName != null)
+				return false;
+		} else if (!productName.equals(other.productName))
+			return false;
+		if (Float.floatToIntBits(beginPrice) != Float
+				.floatToIntBits(other.beginPrice))
+			return false;
+    if (Float.floatToIntBits(fullPrice) != Float
+				.floatToIntBits(other.fullPrice))
+			return false;
+		if (quantity != other.quantity)
+			return false;
+		return true;
+	}
+  
+  /**
+	 * toString() in special format for further use.
+	 */
+	@Override
+	public String toString() {
+		return super.toString() + "::" + categoryId + "::" + productName + "::"
+				+ beginPrice + "::" + fullPrice + "::" + quantity + "::" + description;
+	}
+}

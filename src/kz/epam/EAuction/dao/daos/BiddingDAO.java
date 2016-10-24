@@ -128,11 +128,21 @@ public class BiddingDAO implements InterfaceBiddingDAO {
             try {
                 resultSet = preparedStatement.executeQuery();
                 if (resultSet.next()){
-                    bidding = new Bidding();
+                    bidding = new Bidding(resultSet.getInt(1), resultSet.getInt(2),resultSet.getDate(3));
+                }
+            }
+            finally {
+                if (resultSet != null){
+                    resultSet.close();
                 }
             }
         }
-        return null;
+        finally {
+            if (preparedStatement != null){
+                preparedStatement.close();
+            }
+        }
+        return bidding;
     }
 
     @Override
