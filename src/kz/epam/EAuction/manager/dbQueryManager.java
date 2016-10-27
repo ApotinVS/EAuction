@@ -15,6 +15,7 @@ public class dbQueryManager {
     public static final String ADD_IN_BIDDING = "kz.epam.EAuction.manager.dbQueryManager.add.in.bet";
     public static final String GET_BIDDING_ID = "kz.epam.EAuction.manager.dbQueryManager.get.bidding.id";
     public static final String GET_BIDDING_ON_PRODUCT = "kz.epam.EAuction.manager.dbQueryManager.get.bidding.on.product";
+    public  static final String CREATE_USER = "kz.epam.EAuction.manager.dbQueryManager.create.user";
     public static dbQueryManager getInstance(){
         if (instance == null){
             instance = new dbQueryManager();

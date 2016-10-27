@@ -11,9 +11,9 @@ import java.util.List;
  */
 public interface InterfaceUserDAO {
     public Connection releaseConnection();
-    boolean createUser(int roleId, int repositoryId, String login, String password,
+    boolean createUser(int roleId, /*int repositoryId,*/ String login, String password,
                        String email, String firstName, String secondName) throws SQLException;
-    boolean updateUser(int repositoryId, String login, String password,
+    boolean updateUser(/*int repositoryId,*/ String login, String password,
                        String email, String firstName, String secondName) throws SQLException;
     User getUser (String login) throws SQLException;
     User getUser (int id) throws SQLException;
