@@ -22,7 +22,7 @@
             <span id="advice">You can use letters and number</span>
             <br /><label>First name:</label> <input type="text" name="firstName" />
             <span id="advice">optional field</span>
-            <br /><label>Last name:</label> <input type="text" name="lastName" />
+            <br /><>Last name:</> <input type="text" name="lastName" />
             <span id="advice">optional field</span>
             <input class="button" type="submit" value="Sign-up" />
         </form>

@@ -16,7 +16,9 @@ public class ConfigurationManager {
     public static final String DATABASE_USER = "kz.epam.EAuction.manager.ConfigurationManager.db.user";
     public static final String DATABASE_PASSWORD = "kz.epam.EAuction.manager.ConfigurationManager.db.password";
     public static final String CONNECTION_POOL_SIZE = "kz.epam.EAuction.manager.ConfigurationManager.connection.pool.size";
-
+    public static final String HOME_PAGE = "kz.epam.EAuction.manager.ConfigurationManager.home.page";
+    public static final String ERROR_PAGE = "kz.epam.EAuction.manager.ConfigurationManager.error.page";
+    public  static final String SIGN_UP = "kz.epam.EAuction.manager.ConfigurationManager.singup.page=/index.jspx?menu_id=3";
 
     public static ConfigurationManager getInstance() {
         if (instance == null) {

@@ -11,7 +11,7 @@ import java.util.*;
 /**
  * Created by Вит on 19.10.2016.
  */
-public class BiddingDAO implements InterfaceBiddingDAO {
+/*public class BiddingDAO implements InterfaceBiddingDAO {
     Connection connection;
     public BiddingDAO(){
         this.connection = null;
@@ -149,4 +149,4 @@ public class BiddingDAO implements InterfaceBiddingDAO {
     public List<Bidding> getBiddings() throws SQLException {
         return null;
     }
-}
+}*/

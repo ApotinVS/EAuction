@@ -12,6 +12,7 @@ import java.sql.SQLException;
 public class MySQLDAOFactory extends DAOFactory {
 
     private static ConnectionPool pool;
+
     public MySQLDAOFactory(){
         MySQLDAOFactory.pool = null;
     }

@@ -5,7 +5,12 @@ package kz.epam.EAuction.manager;
  */
 public enum AttributesEnum {
     SING_UP("singup"),
-    USER_SERVICE("userService");
+    USER_SERVICE("userService"),
+    ADMIN("admin"),
+    USER_NAME("userName"),
+    USER_ENTER("userEnter"),
+    WELCOME("welcome"),
+    ERROR_MESSAGE("errorMessage");
 
 
     private final String text;

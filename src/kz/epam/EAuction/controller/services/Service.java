@@ -11,12 +11,13 @@ public abstract class Service {
     private String nameService;
     private ConnectionPool connectionPool;
     protected DAOFactory dao;
-    public Service(){
 
-    }
+    public Service(){}
+
     public Service (String nameService){
         this.nameService = nameService;
     }
+
     public Service(int daoFactory, String nameService){
         connectionPool = ConnectionPool.getInstance();
         dao = DAOFactory.getDAOFactory(daoFactory);

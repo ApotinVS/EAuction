@@ -32,14 +32,14 @@ public class Controller extends HttpServlet {
     }
 
     private void processRequest(HttpServletRequest request, HttpServletResponse response) {
-        String page = null;
+       /* String page = null;
         boolean isThrowable = false;
         if (request.getParameter("throwable") != null){
             isThrowable = request.getParameter("throwable").equals("yes");
         }
         if (!isThrowable){
             CommandInvoker commandInvoker = CommandInvoker.getInstance();
-        }
+        }*/
     }
 
 }

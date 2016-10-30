@@ -11,8 +11,8 @@ import java.sql.SQLException;
 /**
  * Created by Вит on 19.10.2016.
  */
-public class BetDAO implements InterfaceBetDAO {
-    private Connection connection;
+//public class BetDAO implements InterfaceBetDAO {
+/*  private Connection connection;
     public BetDAO(){
         this.connection = null;
     }
@@ -68,5 +68,5 @@ public class BetDAO implements InterfaceBetDAO {
             }
         }
         return betId;
-    }
-}
+    }*/
+//}
